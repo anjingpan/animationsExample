@@ -25,7 +25,7 @@ class ClockView: UIView {
         }
     }
     
-    open var hourWidth: CGFloat = 4 {
+    open var hourWidth: CGFloat = 2 {
         didSet {
             hourLayer.bounds.size.width = hourWidth
             hourLayer.cornerRadius = hourWidth * 0.5
@@ -33,20 +33,20 @@ class ClockView: UIView {
     }
     
     //height = bounds.height * 0.5 - hourMarginHeight
-    open var hourMarginHeight: CGFloat = 10 {
+    open var hourMarginHeight: CGFloat = 4 {
         didSet {
             hourLayer.bounds.size.height = bounds.height * 0.5 - hourMarginHeight
         }
     }
     
-    open var minuteWidth: CGFloat = 4 {
+    open var minuteWidth: CGFloat = 2 {
         didSet {
             minuteLayer.bounds.size.width = minuteWidth
             minuteLayer.cornerRadius = minuteWidth * 0.5
         }
     }
     
-    open var minuteMarginHeight: CGFloat = 6 {
+    open var minuteMarginHeight: CGFloat = 2 {
         didSet {
             minuteLayer.bounds.size.height = bounds.height * 0.5 - minuteMarginHeight
         }
@@ -77,10 +77,12 @@ class ClockView: UIView {
     // MARK: - Life Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .lightGray
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        backgroundColor = .lightGray
     }
     
     override func layoutSubviews() {
@@ -99,7 +101,6 @@ class ClockView: UIView {
     }
     
     func setupOriginView() {
-        backgroundColor = .lightGray
         hourLayer.bounds = CGRect(x: 0, y: 0, width: hourWidth, height: bounds.height * 0.5 - hourMarginHeight)
         hourLayer.cornerRadius = hourWidth * 0.5
         hourLayer.backgroundColor = hourColor.cgColor
