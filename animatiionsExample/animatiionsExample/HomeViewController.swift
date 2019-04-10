@@ -39,20 +39,24 @@ class HomeViewController: UIViewController {
     
     // MARK: - Action
     @objc func buttonClick(sender: UIButton) {
-        let tabBarItemFirst = UITabBarItem(title: "ClockFirst", image: UIImage(named: "Clock"), tag: 1)
-        let firstVC = DatePickViewController()
-        let firstNavigationController = UINavigationController(rootViewController: firstVC)
-        firstNavigationController.tabBarItem = tabBarItemFirst
-        
-        let tabBarItemSecond = UITabBarItem(title: "ClockSecond", image: UIImage(named: "Clock"), tag: 2)
-        let secondVC = DatePickViewController()
-        let secondNavigationController = UINavigationController(rootViewController: secondVC)
-        secondNavigationController.tabBarItem = tabBarItemSecond
-        
-        let tabBarController = UITabBarController()
-        
-        tabBarController.viewControllers = [firstNavigationController, secondNavigationController]
-        navigationController?.pushViewController(tabBarController, animated: true)
+//        let tabBarItemFirst = UITabBarItem(title: "ClockFirst", image: UIImage(named: "Clock"), tag: 1)
+//        let firstVC = DatePickViewController()
+//        let firstNavigationController = UINavigationController(rootViewController: firstVC)
+//        firstNavigationController.tabBarItem = tabBarItemFirst
+//
+//        let tabBarItemSecond = UITabBarItem(title: "ClockSecond", image: UIImage(named: "Clock"), tag: 2)
+//        let secondVC = DatePickViewController()
+//        let secondNavigationController = UINavigationController(rootViewController: secondVC)
+//        secondNavigationController.tabBarItem = tabBarItemSecond
+//
+//        let tabBarController = UITabBarController()
+//
+//        tabBarController.viewControllers = [firstNavigationController, secondNavigationController]
+//        navigationController?.pushViewController(tabBarController, animated: true)
+        let breathView = BreatheView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width))
+        breathView.center = view.center
+        scrollerView.addSubview(breathView)
+        breathView.animate()
     }
 
 }
