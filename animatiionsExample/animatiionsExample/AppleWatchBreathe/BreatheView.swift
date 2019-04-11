@@ -11,22 +11,22 @@ import UIKit
 class BreatheView: UIView {
     
     // MARK: - Property
-    open var circleCount: Int = 6
+    fileprivate var circleCount: Int = 6
     
-    open var startCircleColor: UIColor = UIColor(red: 0.17, green: 0.59, blue: 0.60, alpha: 1)
+    fileprivate var startCircleColor: UIColor = UIColor(red: 0.17, green: 0.59, blue: 0.60, alpha: 1)
     
-    open var endCircleColor: UIColor = UIColor(red: 0.31, green: 0.85, blue: 0.62, alpha: 1)
+    fileprivate var endCircleColor: UIColor = UIColor(red: 0.31, green: 0.85, blue: 0.62, alpha: 1)
     
-    open var circleMinRadius: CGFloat = 24
+    fileprivate var circleMinRadius: CGFloat = 24
     
-    open var circleMaxRadius: CGFloat = 80
+    fileprivate var circleMaxRadius: CGFloat = 80
     
-    open var animationDuration: Double = 10
+    fileprivate var animationDuration: Double = 10
     
     fileprivate lazy var breatheLayer: CAReplicatorLayer = {
         let replicatorLayer = CAReplicatorLayer()
         replicatorLayer.instanceCount = circleCount
-        //to do: Z
+        //绕z轴旋转
         replicatorLayer.instanceTransform = CATransform3DMakeRotation(CGFloat.pi * 2 / CGFloat(circleCount), 0, 0, 1)
         layer.addSublayer(replicatorLayer)
         return replicatorLayer
@@ -61,7 +61,6 @@ class BreatheView: UIView {
         let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
         shapeLayer.path = path.cgPath
         shapeLayer.frame = bounds
-        //to do: compositingFilter
         shapeLayer.compositingFilter = "screenBlendMode"
         return shapeLayer
     }
@@ -94,23 +93,22 @@ class BreatheView: UIView {
         
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [moveAnimation, scaleAnimation]
-        animationGroup.duration = animationDuration
-        animationGroup.repeatCount = .infinity
+        configAnimation(animationGroup)
         circleLayer.add(animationGroup, forKey: nil)
         
         //rotation to breathLayer
-//        let rotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation")
-//        let angle = CGFloat.pi * 2 / CGFloat(circleCount)
-//        rotationAnimation.values = [angle, angle, -angle, -angle, angle]
-//        rotationAnimation.keyTimes = [0, 0.1, 0.4, 0.5, 0.95]
-//        rotationAnimation.repeatCount = .infinity
-//        breatheLayer.add(rotationAnimation, forKey: nil)
-        
+        let rotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation")
+        let angle = CGFloat.pi * 2 / CGFloat(circleCount)
+        rotationAnimation.values = [-angle, angle, angle, -angle]
+        rotationAnimation.keyTimes = [0.1, 0.4, 0.5, 0.95]
+        configAnimation(rotationAnimation)
+        breatheLayer.add(rotationAnimation, forKey: nil)
+
         //center need to Move
         let shadowCircleLayer = initCircleLayer(center: CGPoint(x: bounds.width * 0.5 - circleMaxRadius, y: bounds.height * 0.5), radius: circleMaxRadius)
         breatheLayer.addSublayer(shadowCircleLayer)
         shadowCircleLayer.opacity = 0
-        
+
         let fadeoutAnimation = CAKeyframeAnimation(keyPath: "opacity")
         fadeoutAnimation.values = [0 ,0.3, 0]
         fadeoutAnimation.keyTimes = [0.45, 0.5, 0.8]
@@ -121,9 +119,14 @@ class BreatheView: UIView {
         
         let shadowAnimationGroup = CAAnimationGroup()
         shadowAnimationGroup.animations = [fadeoutAnimation, shadowScaleAnimation]
-        shadowAnimationGroup.duration = animationDuration
-        shadowAnimationGroup.repeatCount = .infinity
+        configAnimation(shadowAnimationGroup)
         shadowCircleLayer.add(shadowAnimationGroup, forKey: nil)
         
+    }
+    
+    ///set up animation
+    fileprivate func configAnimation(_ animation: CAAnimation) {
+        animation.duration = animationDuration
+        animation.repeatCount = .infinity
     }
 }

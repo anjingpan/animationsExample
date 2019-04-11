@@ -10,21 +10,25 @@ import UIKit
 
 class AppleWatchBreatheViewController: UIViewController {
 
+    // MARK: - Property
+    fileprivate lazy var breatheView: BreatheView = {
+        let breathView = BreatheView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width))
+        breathView.center = view.center
+        return breathView
+    }()
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = .lightGray
+        view.addSubview(breatheView)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        breatheView.animate()
     }
-    */
 
 }
