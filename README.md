@@ -8,5 +8,5 @@ Record  the animations encountered
 ***
 ## [Apple Watch Breathe](https://github.com/anjingpan/animationsExample/tree/master/animatiionsExample/animatiionsExample/AppleWatchBreathe)
   It's copy from Apple watch Breathe App.I use ReplicatorLayer to creates six circle Layer. I adopt CAKeyframeAnimation to realize animation
-  ![Apple Watch Breathe](https://github.com/anjingpan/animationsExample/blob/master/animatiionsExample/ScreenShot/AppleWatchBreathe.gif)
+  </br>![Apple Watch Breathe](https://github.com/anjingpan/animationsExample/blob/master/animatiionsExample/ScreenShot/AppleWatchBreathe.gif)
 ***
