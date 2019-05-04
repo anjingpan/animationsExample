@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		564E99B9B6911C96B6C16501 /* Pods_animatiionsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E506EA20B17F3881EC7696 /* Pods_animatiionsExample.framework */; };
 		790A2A27225F1A7E006D03AB /* AppleWatchBreatheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A2A26225F1A7E006D03AB /* AppleWatchBreatheViewController.swift */; };
 		791EB6AE225D9A9700CB5FF3 /* BreatheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791EB6AD225D9A9700CB5FF3 /* BreatheView.swift */; };
 		791EB6B0225DC9E200CB5FF3 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791EB6AF225DC9E200CB5FF3 /* ExtensionColor.swift */; };
+		95100452227B29C500352606 /* favourite.json in Resources */ = {isa = PBXBuildFile; fileRef = 95100451227B29C500352606 /* favourite.json */; };
+		95100454227BED2200352606 /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95100453227BED2200352606 /* LottieViewController.swift */; };
+		95100457227DC7A800352606 /* vcTransitionDismiss.json in Resources */ = {isa = PBXBuildFile; fileRef = 95100455227DC7A700352606 /* vcTransitionDismiss.json */; };
+		95100458227DC7A800352606 /* vcTransitionPresent.json in Resources */ = {isa = PBXBuildFile; fileRef = 95100456227DC7A700352606 /* vcTransitionPresent.json */; };
 		951D5D68225B961500C5EFEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D5D67225B961500C5EFEE /* AppDelegate.swift */; };
 		951D5D6A225B961500C5EFEE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D5D69225B961500C5EFEE /* HomeViewController.swift */; };
 		951D5D6F225B961700C5EFEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951D5D6E225B961700C5EFEE /* Assets.xcassets */; };
@@ -39,9 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1551C124240AC7D43BBA96BE /* Pods-animatiionsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animatiionsExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-animatiionsExample/Pods-animatiionsExample.release.xcconfig"; sourceTree = "<group>"; };
 		790A2A26225F1A7E006D03AB /* AppleWatchBreatheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWatchBreatheViewController.swift; sourceTree = "<group>"; };
 		791EB6AD225D9A9700CB5FF3 /* BreatheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheView.swift; sourceTree = "<group>"; };
 		791EB6AF225DC9E200CB5FF3 /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
+		95100451227B29C500352606 /* favourite.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = favourite.json; sourceTree = "<group>"; };
+		95100453227BED2200352606 /* LottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
+		95100455227DC7A700352606 /* vcTransitionDismiss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcTransitionDismiss.json; sourceTree = "<group>"; };
+		95100456227DC7A700352606 /* vcTransitionPresent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcTransitionPresent.json; sourceTree = "<group>"; };
 		951D5D64225B961500C5EFEE /* animatiionsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animatiionsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951D5D67225B961500C5EFEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		951D5D69225B961500C5EFEE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +67,8 @@
 		951D5D96225B967D00C5EFEE /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		951D5D98225BA5F900C5EFEE /* TabBarReplaceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarReplaceable.swift; sourceTree = "<group>"; };
 		951D5D9A225BAD4000C5EFEE /* DatePickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickViewController.swift; sourceTree = "<group>"; };
+		C33EB1A9844138CB9B3427E1 /* Pods-animatiionsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animatiionsExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-animatiionsExample/Pods-animatiionsExample.debug.xcconfig"; sourceTree = "<group>"; };
+		D1E506EA20B17F3881EC7696 /* Pods_animatiionsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_animatiionsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564E99B9B6911C96B6C16501 /* Pods_animatiionsExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		323A61D77C2645AA3F5EFB96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C33EB1A9844138CB9B3427E1 /* Pods-animatiionsExample.debug.xcconfig */,
+				1551C124240AC7D43BBA96BE /* Pods-animatiionsExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		791EB6AC225D86BF00CB5FF3 /* AppleWatchBreathe */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +116,17 @@
 			path = AppleWatchBreathe;
 			sourceTree = "<group>";
 		};
+		95100450227B29C500352606 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				95100456227DC7A700352606 /* vcTransitionPresent.json */,
+				95100455227DC7A700352606 /* vcTransitionDismiss.json */,
+				95100451227B29C500352606 /* favourite.json */,
+				95100453227BED2200352606 /* LottieViewController.swift */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		951D5D5B225B961500C5EFEE = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +134,8 @@
 				951D5D7B225B961700C5EFEE /* animatiionsExampleTests */,
 				951D5D86225B961700C5EFEE /* animatiionsExampleUITests */,
 				951D5D65225B961500C5EFEE /* Products */,
+				323A61D77C2645AA3F5EFB96 /* Pods */,
+				FDBFC9B66DD0FACEB9B2C655 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +154,7 @@
 			children = (
 				951D5D95225B966D00C5EFEE /* TabBar */,
 				791EB6AC225D86BF00CB5FF3 /* AppleWatchBreathe */,
+				95100450227B29C500352606 /* Lottie */,
 				951D5D67225B961500C5EFEE /* AppDelegate.swift */,
 				951D5D69225B961500C5EFEE /* HomeViewController.swift */,
 				951D5D6E225B961700C5EFEE /* Assets.xcassets */,
@@ -156,6 +192,14 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		FDBFC9B66DD0FACEB9B2C655 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1E506EA20B17F3881EC7696 /* Pods_animatiionsExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 951D5D8C225B961700C5EFEE /* Build configuration list for PBXNativeTarget "animatiionsExample" */;
 			buildPhases = (
+				757B3AAF69E66AF75B90FE6F /* [CP] Check Pods Manifest.lock */,
 				951D5D60225B961500C5EFEE /* Sources */,
 				951D5D61225B961500C5EFEE /* Frameworks */,
 				951D5D62225B961500C5EFEE /* Resources */,
+				DA2C1F375F8B79C58B90A196 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,6 +306,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95100457227DC7A800352606 /* vcTransitionDismiss.json in Resources */,
+				95100458227DC7A800352606 /* vcTransitionPresent.json in Resources */,
+				95100452227B29C500352606 /* favourite.json in Resources */,
 				951D5D72225B961700C5EFEE /* LaunchScreen.storyboard in Resources */,
 				951D5D6F225B961700C5EFEE /* Assets.xcassets in Resources */,
 			);
@@ -281,6 +330,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		757B3AAF69E66AF75B90FE6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-animatiionsExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA2C1F375F8B79C58B90A196 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-animatiionsExample/Pods-animatiionsExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-animatiionsExample/Pods-animatiionsExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		951D5D60225B961500C5EFEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -290,6 +386,7 @@
 				951D5D6A225B961500C5EFEE /* HomeViewController.swift in Sources */,
 				791EB6B0225DC9E200CB5FF3 /* ExtensionColor.swift in Sources */,
 				790A2A27225F1A7E006D03AB /* AppleWatchBreatheViewController.swift in Sources */,
+				95100454227BED2200352606 /* LottieViewController.swift in Sources */,
 				951D5D97225B967D00C5EFEE /* ClockView.swift in Sources */,
 				951D5D99225BA5F900C5EFEE /* TabBarReplaceable.swift in Sources */,
 				791EB6AE225D9A9700CB5FF3 /* BreatheView.swift in Sources */,
@@ -458,6 +555,7 @@
 		};
 		951D5D8D225B961700C5EFEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C33EB1A9844138CB9B3427E1 /* Pods-animatiionsExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -477,6 +575,7 @@
 		};
 		951D5D8E225B961700C5EFEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1551C124240AC7D43BBA96BE /* Pods-animatiionsExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

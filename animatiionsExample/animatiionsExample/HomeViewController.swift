@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Lottie
 
 class HomeViewController: UIViewController {
 
     // MARK: - Property
-    fileprivate var animationArray = ["TabBar Animation", "Apple Watch Breathe Animation"]
+    fileprivate var animationArray = ["TabBar Animation", "Apple Watch Breathe Animation", "Lottie", "Lottie Push"]
     
     fileprivate lazy var scrollerView: UIScrollView = {
         let scroller = UIScrollView(frame: UIScreen.main.bounds)
@@ -62,7 +63,44 @@ class HomeViewController: UIViewController {
         if sender.tag == 1 {
             let breatheVC = AppleWatchBreatheViewController()
             navigationController?.pushViewController(breatheVC, animated: true)
+        }else if sender.tag == 2 {
+            let lottieVC = LottieViewController()
+            lottieVC.transitioningDelegate = self
+            present(lottieVC, animated: true, completion: nil)
+        }else if sender.tag == 3 {
+            let lottieVC = LottieViewController()
+            navigationController?.delegate = self
+            navigationController?.pushViewController(lottieVC, animated: true)
         }
     }
 
+}
+
+// MARK: - Transitioning Delegate
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return LOTAnimationTransitionController(animationNamed: "vcTransitionPresent", fromLayerNamed: "outLayer", toLayerNamed: "inLayer", applyAnimationTransform: false)
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return LOTAnimationTransitionController(animationNamed: "vcTransitionDismiss", fromLayerNamed: "outLayer", toLayerNamed: "inLayer", applyAnimationTransform: false)
+    }
+}
+
+// MARK: - Navigation Delegate
+extension HomeViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        guard toVC.isKind(of: LottieViewController.self) else {
+            return nil
+        }
+        
+        if operation == .push {
+            return LOTAnimationTransitionController(animationNamed: "vcTransitionPresent", fromLayerNamed: "outLayer", toLayerNamed: "inLayer", applyAnimationTransform: false)
+        }
+        if operation == .pop {
+            return LOTAnimationTransitionController(animationNamed: "vcTransitionDismiss", fromLayerNamed: "outLayer", toLayerNamed: "inLayer", applyAnimationTransform: false)
+        }
+        
+        return nil
+    }
 }
